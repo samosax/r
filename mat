@@ -1,0 +1,119 @@
+
+1) General equation graph plot
+	fplot('eqn' , [ , range])
+
+2) Trignometric plot 
+	range declaration { x = [0 : 2*pi] }
+	when range  use ' . '
+	ex ) y = x.*sin(x)
+	plot(x,y)
+
+3) r = sqrt(2*sin(5*t))
+	x = r.*cos(t)
+	y = r.*sin(t)
+	polar(x,y) 
+
+	FILL
+	t = linspace(0,2*pi,1000)
+ 	r = sqrt(2*sin(5*t))
+	x = r.*cos(t)
+	y = r.*sin(t)
+	fill(x,y,'r')
+
+3)
+	MESH
+	x=(0:4)
+	y(-4,4)
+	[x,y] = meshgrid(x,y)
+	z = (x.^2) - (y.^2)
+	mesh(x,y,z)
+	surf(x,y,z)
+	contour(x,y,z)
+	
+4) MATRIX
+	a = [linespace(0,30,7);linespace(600,0,7);linespace(0,5,7)]
+
+5)ROOTS OF POLYNOMIAL
+	x = ([coeeficients])
+	x = ([1 2 -3 4])
+
+
+
+6)Matrix to solve system of linear equations
+	equation1 = euation==rhs
+	equation2 = euation==rhs
+	equation3 = euation==rhs
+
+	[A,B] = equationToMatrix([equation1,equation2,equation3],[x,y,z])
+	linsolve(A,B)
+
+
+|a| = abs(a)
+e^power = exp(power)
+	Create a row vector in which the first element is 1, the last element is 33, with an increment of 2 
+     	between the elements.
+		A = [1:2:33]
+		A = [15:-5:-25]
+		transpose(A)
+
+	. Create a vector, name it Afirst,  that has 16 elements in which the first is 4, the increment is 3 and 
+   	 the last element is 49. Then, using the colon symbol, create a new vector , call it Asecond, that 
+   	 has eight elements. The first four elements are the first four elements of the vector Afirst, and the  
+   	 last four are the last four elements of the vector Afirst. 
+
+		Asecond = [A(1:4) A(13:16)]
+
+	A 3x3 matrix where all elements are 5 
+
+		b = [5 5 ; 5 5] 
+
+
+A = ones(3,3)
+
+A =
+
+     1     1     1
+     1     1     1
+     1     1     1
+
+>> A[1:3,4:5] = zeros[3,2]
+ A[1:3,4:5] = zeros[3,2]
+  ↑
+Error: Invalid expression. When calling a function or indexing a variable, use parentheses.
+Otherwise, check for mismatched delimiters.
+ 
+>> A(1:3,4:5) = zeros(3,2)
+
+A =
+
+     1     1     1     0     0
+     1     1     1     0     0
+     1     1     1     0     0
+
+>> A(4:5,1:3) = zeros(2,3)
+
+A =
+
+     1     1     1     0     0
+     1     1     1     0     0
+     1     1     1     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+
+>> b = [5 5; 5 5]
+
+b =
+
+     5     5
+     5     5
+
+>> A(4:5,4:5) = b(1:2,1:2)
+
+A =
+
+     1     1     1     0     0
+     1     1     1     0     0
+     1     1     1     0     0
+     0     0     0     5     5
+     0     0     0     5     5
+	
