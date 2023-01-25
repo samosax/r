@@ -1,0 +1,60 @@
+Roman = input('Enter "new" style  Roman numeral : ','s');
+L = strlength(Roman);
+Decimal = 0;
+for i=L:-1:1
+	if (isequal(i,L))
+   	if(isequal(Roman(i),'I'))
+       	Decimal = Decimal + 1;
+   	elseif(isequal(Roman(i),'V'))
+       	Decimal = Decimal + 5;
+   	elseif(isequal(Roman(i),'X'))
+       	Decimal = Decimal + 10;
+   	elseif(isequal(Roman(i),'L'))
+       	Decimal = Decimal + 50;
+   	elseif(isequal(Roman(i),'C'))
+       	Decimal = Decimal + 100;
+   	elseif(isequal(Roman(i),'D'))
+       	Decimal = Decimal + 500;
+   	elseif(isequal(Roman(i),'M'))
+       	Decimal = Decimal + 1000;
+   	end
+	else
+   	if(isequal(Roman(i),'I'))
+       	Decimal = Decimal - 1;
+   	elseif(isequal(Roman(i),'V'))
+       	Decimal = Decimal - 5;
+   	elseif(isequal(Roman(i),'X'))
+       	Decimal = Decimal - 10;
+   	elseif(isequal(Roman(i),'L'))
+       	Decimal = Decimal - 50;
+   	elseif(isequal(Roman(i),'C'))
+       	Decimal = Decimal - 100;
+   	elseif(isequal(Roman(i),'D'))
+       	Decimal = Decimal - 500;
+   	elseif(isequal(Roman(i),'M'))
+       	Decimal = Decimal - 1000;
+   	end
+	end   	 
+end
+fprintf('"new" style Decimal = %d\n',Decimal);
+Roman = input('Enter "old" style  Roman numeral : ','s');
+L = strlength(Roman);
+Decimal = 0;
+for i=1:L
+   	if(isequal(Roman(i),'I'))
+       	Decimal = Decimal + 1;
+   	elseif(isequal(Roman(i),'V'))
+       	Decimal = Decimal + 5;
+   	elseif(isequal(Roman(i),'X'))
+       	Decimal = Decimal + 10;
+   	elseif(isequal(Roman(i),'L'))
+       	Decimal = Decimal + 50;
+   	elseif(isequal(Roman(i),'C'))
+       	Decimal = Decimal + 100;
+   	elseif(isequal(Roman(i),'D'))
+       	Decimal = Decimal + 500;
+   	elseif(isequal(Roman(i),'M'))
+       	Decimal = Decimal + 1000;
+   	end
+end
+fprintf('"old" style Decimal = %d\n',Decimal);
